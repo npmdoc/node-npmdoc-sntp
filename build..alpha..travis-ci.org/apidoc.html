@@ -1,0 +1,936 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/hueniverse/sntp#readme"
+
+    >sntp (v2.0.2)</a>
+</h1>
+<h4>SNTP Client</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sntp">module sntp</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sntp.isLive">
+            function <span class="apidocSignatureSpan">sntp.</span>isLive
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sntp.now">
+            function <span class="apidocSignatureSpan">sntp.</span>now
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sntp.offset">
+            function <span class="apidocSignatureSpan">sntp.</span>offset
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sntp.start">
+            function <span class="apidocSignatureSpan">sntp.</span>start
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sntp.stop">
+            function <span class="apidocSignatureSpan">sntp.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sntp.time">
+            function <span class="apidocSignatureSpan">sntp.</span>time
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sntp.isLive">module sntp.isLive</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sntp.isLive.isLive">
+            function <span class="apidocSignatureSpan">sntp.</span>isLive
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sntp.now">module sntp.now</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sntp.now.now">
+            function <span class="apidocSignatureSpan">sntp.</span>now
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sntp.offset">module sntp.offset</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sntp.offset.offset">
+            function <span class="apidocSignatureSpan">sntp.</span>offset
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sntp.start">module sntp.start</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sntp.start.start">
+            function <span class="apidocSignatureSpan">sntp.</span>start
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sntp.stop">module sntp.stop</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sntp.stop.stop">
+            function <span class="apidocSignatureSpan">sntp.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.sntp.time">module sntp.time</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.sntp.time.time">
+            function <span class="apidocSignatureSpan">sntp.</span>time
+            <span class="apidocSignatureSpan">(options, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sntp" id="apidoc.module.sntp">module sntp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sntp.isLive" id="apidoc.element.sntp.isLive">
+        function <span class="apidocSignatureSpan">sntp.</span>isLive
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isLive = function () {
+
+    return !!internals.now.intervalId;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sntp.now" id="apidoc.element.sntp.now">
+        function <span class="apidocSignatureSpan">sntp.</span>now
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">now = function () {
+
+    const now = Date.now();
+    if (!exports.isLive() ||
+        now &#x3e;= internals.last.expires) {
+
+        return now;
+    }
+
+    return now + internals.last.offset;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+```
+
+To set a background offset refresh, start the interval and use the provided now() method. If for any reason the
+client fails to obtain an up-to-date offset, the current system clock is used.
+
+```javascript
+var before = Sntp.<span class="apidocCodeKeywordSpan">now</span>();                    // System time without offset
+
+Sntp.start(function () {
+
+    var now = Sntp.now();                   // With offset
+    Sntp.stop();
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sntp.offset" id="apidoc.element.sntp.offset">
+        function <span class="apidocSignatureSpan">sntp.</span>offset
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">offset = function (options, callback) {
+
+    if (arguments.length !== 2) {
+        callback = arguments[0];
+        options = {};
+    }
+
+    const now = Date.now();
+    const clockSyncRefresh = options.clockSyncRefresh || 24 * 60 * 60 * 1000;                    // Daily
+
+    if (internals.last.offset &#x26;&#x26;
+        internals.last.host === options.host &#x26;&#x26;
+        internals.last.port === options.port &#x26;&#x26;
+        now &#x3c; internals.last.expires) {
+
+        process.nextTick(() =&#x3e; callback(null, internals.last.offset));
+        return;
+    }
+
+    exports.time(options, (err, time) =&#x3e; {
+
+        if (err) {
+            return callback(err, 0);
+        }
+
+        internals.last = {
+            offset: Math.round(time.t),
+            expires: now + clockSyncRefresh,
+            host: options.host,
+            port: options.port
+        };
+
+        return callback(null, internals.last.offset);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+If an application needs to maintain continuous time synchronization, the module provides a stateful method for
+querying the current offset only when the last one is too old (defaults to daily).
+
+```javascript
+// Request offset once
+
+Sntp.<span class="apidocCodeKeywordSpan">offset</span>(function (err, offset) {
+
+console.log(offset);                    // New (served fresh)
+
+// Request offset again
+
+Sntp.offset(function (err, offset) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sntp.start" id="apidoc.element.sntp.start">
+        function <span class="apidocSignatureSpan">sntp.</span>start
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (options, callback) {
+
+    if (arguments.length !== 2) {
+        callback = arguments[0];
+        options = {};
+    }
+
+    if (internals.now.intervalId) {
+        process.nextTick(() =&#x3e; callback());
+        return;
+    }
+
+    exports.offset(options, (ignoreErr, offset) =&#x3e; {
+
+        internals.now.intervalId = setInterval(() =&#x3e; {
+
+            exports.offset(options, Hoek.ignore);
+        }, options.clockSyncRefresh || 24 * 60 * 60 * 1000);                                // Daily
+
+        return callback();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+To set a background offset refresh, start the interval and use the provided now() method. If for any reason the
+client fails to obtain an up-to-date offset, the current system clock is used.
+
+```javascript
+var before = Sntp.now();                    // System time without offset
+
+Sntp.<span class="apidocCodeKeywordSpan">start</span>(function () {
+
+    var now = Sntp.now();                   // With offset
+    Sntp.stop();
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sntp.stop" id="apidoc.element.sntp.stop">
+        function <span class="apidocSignatureSpan">sntp.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function () {
+
+    if (!internals.now.intervalId) {
+        return;
+    }
+
+    clearInterval(internals.now.intervalId);
+    internals.now.intervalId = 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```javascript
+var before = Sntp.now();                    // System time without offset
+
+Sntp.start(function () {
+
+    var now = Sntp.now();                   // With offset
+    Sntp.<span class="apidocCodeKeywordSpan">stop</span>();
+});
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.sntp.time" id="apidoc.element.sntp.time">
+        function <span class="apidocSignatureSpan">sntp.</span>time
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">time = function (options, callback) {
+
+    if (arguments.length !== 2) {
+        callback = arguments[0];
+        options = {};
+    }
+
+    const settings = Hoek.clone(options);
+    settings.host = settings.host || &#x27;pool.ntp.org&#x27;;
+    settings.port = settings.port || 123;
+    settings.resolveReference = settings.resolveReference || false;
+
+    // Declare variables used by callback
+
+    let timeoutId = 0;
+    let sent = 0;
+
+    // Ensure callback is only called once
+
+    const finish = Hoek.once((err, result) =&#x3e; {
+
+        if (timeoutId) {
+            clearTimeout(timeoutId);
+            timeoutId = 0;
+        }
+
+        socket.removeAllListeners();
+        socket.once(&#x27;error&#x27;, Hoek.ignore);
+        socket.close();
+        return callback(err, result);
+    });
+
+    // Create UDP socket
+
+    const socket = Dgram.createSocket(&#x27;udp4&#x27;);
+
+    socket.once(&#x27;error&#x27;, (err) =&#x3e; finish(err));
+
+    // Listen to incoming messages
+
+    socket.on(&#x27;message&#x27;, (buffer, rinfo) =&#x3e; {
+
+        const received = Date.now();
+
+        const message = new internals.NtpMessage(buffer);
+        if (!message.isValid) {
+            return finish(new Error(&#x27;Invalid server response&#x27;), message);
+        }
+
+        if (message.originateTimestamp !== sent) {
+            return finish(new Error(&#x27;Wrong originate timestamp&#x27;), message);
+        }
+
+        // Timestamp Name          ID   When Generated
+        // ------------------------------------------------------------
+        // Originate Timestamp     T1   time request sent by client
+        // Receive Timestamp       T2   time request received by server
+        // Transmit Timestamp      T3   time reply sent by server
+        // Destination Timestamp   T4   time reply received by client
+        //
+        // The roundtrip delay d and system clock offset t are defined as:
+        //
+        // d = (T4 - T1) - (T3 - T2)     t = ((T2 - T1) + (T3 - T4)) / 2
+
+        const T1 = message.originateTimestamp;
+        const T2 = message.receiveTimestamp;
+        const T3 = message.transmitTimestamp;
+        const T4 = received;
+
+        message.d = (T4 - T1) - (T3 - T2);
+        message.t = ((T2 - T1) + (T3 - T4)) / 2;
+        message.receivedLocally = received;
+
+        if (!settings.resolveReference ||
+            message.stratum !== &#x27;secondary&#x27;) {
+
+            return finish(null, message);
+        }
+
+        // Resolve reference IP address
+
+        Dns.reverse(message.referenceId, (err, domains) =&#x3e; {
+
+            if (/* $lab:coverage:off$ */ !err /* $lab:coverage:on$ */) {
+                message.referenceHost = domains[0];
+            }
+
+            return finish(null, message);
+        });
+    });
+
+    // Set timeout
+
+    if (settings.timeout) {
+        timeoutId = setTimeout(() =&#x3e; {
+
+            timeoutId = 0;
+            return finish(new Error(&#x27;Timeout&#x27;));
+        }, settings.timeout);
+    }
+
+    // Construct NTP message
+
+    const message = new Buffer(48);
+    for (let i = 0; i &#x3c; 48; ++i) {                      // Zero message
+        message[i] = 0;
+    }
+
+    message[0] = (0 &#x3c;&#x3c; 6) + (4 &#x3c;&#x3c; 3) + (3 &#x3c;&#x3c; 0);        // Set version number to 4 and Mode to 3 (client)
+    sent = Date.now();
+    internals.fromMsecs(sent, message, 40);             // Set transmit timestamp (returns as originate)
+
+    // Send NTP request
+
+    socket.send(message, 0, message.length, settings.port, settings.host, (err, bytes) =&#x3e; {
+
+        if (err ||
+            bytes !== 48) {
+
+            return finish(err || new Error(&#x27;Could not send entire message&#x27;));
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+port: 123,                      // Defaults to 123 (NTP)
+resolveReference: true,         // Default to false (not resolving)
+timeout: 1000                   // Defaults to zero (no timeout)
+};
+
+// Request server time
+
+Sntp.<span class="apidocCodeKeywordSpan">time</span>(options, function (err, time) {
+
+if (err) {
+    console.log(&#x27;Failed: &#x27; + err.message);
+    process.exit(1);
+}
+
+console.log(&#x27;Local clock is off by: &#x27; + time.t + &#x27; milliseconds&#x27;);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sntp.isLive" id="apidoc.module.sntp.isLive">module sntp.isLive</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sntp.isLive.isLive" id="apidoc.element.sntp.isLive.isLive">
+        function <span class="apidocSignatureSpan">sntp.</span>isLive
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isLive = function () {
+
+    return !!internals.now.intervalId;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sntp.now" id="apidoc.module.sntp.now">module sntp.now</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sntp.now.now" id="apidoc.element.sntp.now.now">
+        function <span class="apidocSignatureSpan">sntp.</span>now
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">now = function () {
+
+    const now = Date.now();
+    if (!exports.isLive() ||
+        now &#x3e;= internals.last.expires) {
+
+        return now;
+    }
+
+    return now + internals.last.offset;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+```
+
+To set a background offset refresh, start the interval and use the provided now() method. If for any reason the
+client fails to obtain an up-to-date offset, the current system clock is used.
+
+```javascript
+var before = Sntp.<span class="apidocCodeKeywordSpan">now</span>();                    // System time without offset
+
+Sntp.start(function () {
+
+    var now = Sntp.now();                   // With offset
+    Sntp.stop();
+});
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sntp.offset" id="apidoc.module.sntp.offset">module sntp.offset</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sntp.offset.offset" id="apidoc.element.sntp.offset.offset">
+        function <span class="apidocSignatureSpan">sntp.</span>offset
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">offset = function (options, callback) {
+
+    if (arguments.length !== 2) {
+        callback = arguments[0];
+        options = {};
+    }
+
+    const now = Date.now();
+    const clockSyncRefresh = options.clockSyncRefresh || 24 * 60 * 60 * 1000;                    // Daily
+
+    if (internals.last.offset &#x26;&#x26;
+        internals.last.host === options.host &#x26;&#x26;
+        internals.last.port === options.port &#x26;&#x26;
+        now &#x3c; internals.last.expires) {
+
+        process.nextTick(() =&#x3e; callback(null, internals.last.offset));
+        return;
+    }
+
+    exports.time(options, (err, time) =&#x3e; {
+
+        if (err) {
+            return callback(err, 0);
+        }
+
+        internals.last = {
+            offset: Math.round(time.t),
+            expires: now + clockSyncRefresh,
+            host: options.host,
+            port: options.port
+        };
+
+        return callback(null, internals.last.offset);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+If an application needs to maintain continuous time synchronization, the module provides a stateful method for
+querying the current offset only when the last one is too old (defaults to daily).
+
+```javascript
+// Request offset once
+
+Sntp.<span class="apidocCodeKeywordSpan">offset</span>(function (err, offset) {
+
+console.log(offset);                    // New (served fresh)
+
+// Request offset again
+
+Sntp.offset(function (err, offset) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sntp.start" id="apidoc.module.sntp.start">module sntp.start</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sntp.start.start" id="apidoc.element.sntp.start.start">
+        function <span class="apidocSignatureSpan">sntp.</span>start
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function (options, callback) {
+
+    if (arguments.length !== 2) {
+        callback = arguments[0];
+        options = {};
+    }
+
+    if (internals.now.intervalId) {
+        process.nextTick(() =&#x3e; callback());
+        return;
+    }
+
+    exports.offset(options, (ignoreErr, offset) =&#x3e; {
+
+        internals.now.intervalId = setInterval(() =&#x3e; {
+
+            exports.offset(options, Hoek.ignore);
+        }, options.clockSyncRefresh || 24 * 60 * 60 * 1000);                                // Daily
+
+        return callback();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+To set a background offset refresh, start the interval and use the provided now() method. If for any reason the
+client fails to obtain an up-to-date offset, the current system clock is used.
+
+```javascript
+var before = Sntp.now();                    // System time without offset
+
+Sntp.<span class="apidocCodeKeywordSpan">start</span>(function () {
+
+    var now = Sntp.now();                   // With offset
+    Sntp.stop();
+});
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sntp.stop" id="apidoc.module.sntp.stop">module sntp.stop</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sntp.stop.stop" id="apidoc.element.sntp.stop.stop">
+        function <span class="apidocSignatureSpan">sntp.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function () {
+
+    if (!internals.now.intervalId) {
+        return;
+    }
+
+    clearInterval(internals.now.intervalId);
+    internals.now.intervalId = 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```javascript
+var before = Sntp.now();                    // System time without offset
+
+Sntp.start(function () {
+
+    var now = Sntp.now();                   // With offset
+    Sntp.<span class="apidocCodeKeywordSpan">stop</span>();
+});
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.sntp.time" id="apidoc.module.sntp.time">module sntp.time</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.sntp.time.time" id="apidoc.element.sntp.time.time">
+        function <span class="apidocSignatureSpan">sntp.</span>time
+        <span class="apidocSignatureSpan">(options, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">time = function (options, callback) {
+
+    if (arguments.length !== 2) {
+        callback = arguments[0];
+        options = {};
+    }
+
+    const settings = Hoek.clone(options);
+    settings.host = settings.host || &#x27;pool.ntp.org&#x27;;
+    settings.port = settings.port || 123;
+    settings.resolveReference = settings.resolveReference || false;
+
+    // Declare variables used by callback
+
+    let timeoutId = 0;
+    let sent = 0;
+
+    // Ensure callback is only called once
+
+    const finish = Hoek.once((err, result) =&#x3e; {
+
+        if (timeoutId) {
+            clearTimeout(timeoutId);
+            timeoutId = 0;
+        }
+
+        socket.removeAllListeners();
+        socket.once(&#x27;error&#x27;, Hoek.ignore);
+        socket.close();
+        return callback(err, result);
+    });
+
+    // Create UDP socket
+
+    const socket = Dgram.createSocket(&#x27;udp4&#x27;);
+
+    socket.once(&#x27;error&#x27;, (err) =&#x3e; finish(err));
+
+    // Listen to incoming messages
+
+    socket.on(&#x27;message&#x27;, (buffer, rinfo) =&#x3e; {
+
+        const received = Date.now();
+
+        const message = new internals.NtpMessage(buffer);
+        if (!message.isValid) {
+            return finish(new Error(&#x27;Invalid server response&#x27;), message);
+        }
+
+        if (message.originateTimestamp !== sent) {
+            return finish(new Error(&#x27;Wrong originate timestamp&#x27;), message);
+        }
+
+        // Timestamp Name          ID   When Generated
+        // ------------------------------------------------------------
+        // Originate Timestamp     T1   time request sent by client
+        // Receive Timestamp       T2   time request received by server
+        // Transmit Timestamp      T3   time reply sent by server
+        // Destination Timestamp   T4   time reply received by client
+        //
+        // The roundtrip delay d and system clock offset t are defined as:
+        //
+        // d = (T4 - T1) - (T3 - T2)     t = ((T2 - T1) + (T3 - T4)) / 2
+
+        const T1 = message.originateTimestamp;
+        const T2 = message.receiveTimestamp;
+        const T3 = message.transmitTimestamp;
+        const T4 = received;
+
+        message.d = (T4 - T1) - (T3 - T2);
+        message.t = ((T2 - T1) + (T3 - T4)) / 2;
+        message.receivedLocally = received;
+
+        if (!settings.resolveReference ||
+            message.stratum !== &#x27;secondary&#x27;) {
+
+            return finish(null, message);
+        }
+
+        // Resolve reference IP address
+
+        Dns.reverse(message.referenceId, (err, domains) =&#x3e; {
+
+            if (/* $lab:coverage:off$ */ !err /* $lab:coverage:on$ */) {
+                message.referenceHost = domains[0];
+            }
+
+            return finish(null, message);
+        });
+    });
+
+    // Set timeout
+
+    if (settings.timeout) {
+        timeoutId = setTimeout(() =&#x3e; {
+
+            timeoutId = 0;
+            return finish(new Error(&#x27;Timeout&#x27;));
+        }, settings.timeout);
+    }
+
+    // Construct NTP message
+
+    const message = new Buffer(48);
+    for (let i = 0; i &#x3c; 48; ++i) {                      // Zero message
+        message[i] = 0;
+    }
+
+    message[0] = (0 &#x3c;&#x3c; 6) + (4 &#x3c;&#x3c; 3) + (3 &#x3c;&#x3c; 0);        // Set version number to 4 and Mode to 3 (client)
+    sent = Date.now();
+    internals.fromMsecs(sent, message, 40);             // Set transmit timestamp (returns as originate)
+
+    // Send NTP request
+
+    socket.send(message, 0, message.length, settings.port, settings.host, (err, bytes) =&#x3e; {
+
+        if (err ||
+            bytes !== 48) {
+
+            return finish(err || new Error(&#x27;Could not send entire message&#x27;));
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+port: 123,                      // Defaults to 123 (NTP)
+resolveReference: true,         // Default to false (not resolving)
+timeout: 1000                   // Defaults to zero (no timeout)
+};
+
+// Request server time
+
+Sntp.<span class="apidocCodeKeywordSpan">time</span>(options, function (err, time) {
+
+if (err) {
+    console.log(&#x27;Failed: &#x27; + err.message);
+    process.exit(1);
+}
+
+console.log(&#x27;Local clock is off by: &#x27; + time.t + &#x27; milliseconds&#x27;);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
