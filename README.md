@@ -1,4 +1,7 @@
-# api documentation for  [sntp (v2.0.2)](https://github.com/hueniverse/sntp#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-sntp.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-sntp) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-sntp.svg)](https://travis-ci.org/npmdoc/node-npmdoc-sntp)
+# npmdoc-sntp
+
+#### api documentation for  [sntp (v2.0.2)](https://github.com/hueniverse/sntp#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-sntp.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-sntp) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-sntp.svg)](https://travis-ci.org/npmdoc/node-npmdoc-sntp)
+
 #### SNTP Client
 
 [![NPM](https://nodei.co/npm/sntp.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/sntp)
